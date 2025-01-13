@@ -2,7 +2,7 @@ import React from 'react'
 
 const TaskForm = ({handleChange, handleSubmit, name, isEditing, updateTask}) => {
   return (
-    <form onSubmit={ isEditing ? updateTask : handleSubmit} 
+    <form onSubmit={ isEditing ? updateTask : handleSubmit } 
     className='py-5 w-full inline-flex '>
         <input onChange={handleChange} value={name} name='name' type="text" placeholder='Add a Task'  
         className='w-full h-9 outline outline-1 outline-blue-300 focus:outline-blue-800  ' />

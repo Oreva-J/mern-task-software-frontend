@@ -29,6 +29,7 @@ const TaskList = () => {
         await axios.post(`${URL}/api/task`, formInput)
         toast.success("Task Created successfuly")
         setFormInput({...formInput, name:"" })
+        getTask()
       } catch (error) {
         console.error(error.message);
         toast.error("Problem creating task")
@@ -50,9 +51,11 @@ const TaskList = () => {
       
     }
 
+    
+
     useEffect(()=>{
       getTask()
-    }, [name])
+    }, [])
 
     const deleteTask = async (id) => {
       if (id === "") {
