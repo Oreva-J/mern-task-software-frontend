@@ -4,7 +4,7 @@ import { RiDeleteBin6Line } from 'react-icons/ri'
 
 const Task = ({task, index, deleteTask, editTask, setTaskToComplete,}) => {
   return (
-    <div className={`inline-flex justify-between items-center px-5 bg-slate-200 w-full h-10 border-l-4 ${ task.completedTask ? "border-green-500" : 'border-red-500'} `}>
+    <div className={`inline-flex justify-between items-center px-5 bg-slate-200 w-full min-h-10 border-l-4 ${ task.completedTask ? "border-green-500" : 'border-red-500'} `}>
         <div>
             <span>{index +1}. </span>
             <span> {task.name}</span>
